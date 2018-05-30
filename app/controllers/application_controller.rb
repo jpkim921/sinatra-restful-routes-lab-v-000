@@ -52,7 +52,7 @@ binding.pry
 
   get '/recipes/:id/update' do
     # @recipe = Recipe.find_by_id(params[:id])
-    redirect '/recipes/:id/edit'
+    redirect "/recipes/#{params[:id]}/edit"
   end
 
 
