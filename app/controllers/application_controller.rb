@@ -19,12 +19,6 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  # show action
-  get '/recipes/:id' do
-    @recipe = Recipe.find_by_id(params[:id])
-    erb :show
-  end
-
   post '/recipes' do
     @recipe = Recipe.create(:name => params[:name], :ingredients => params[:ingredients], :cook_time => params[:cook_time])
 
@@ -32,6 +26,14 @@ class ApplicationController < Sinatra::Base
     # # placeholder is there until the real deal
     # erb :placeholder
   end
+
+  # show action
+  get '/recipes/:id' do
+    @recipe = Recipe.find_by_id(params[:id])
+    erb :show
+  end
+
+
 
   # edit action
   get '/recipes/:id/edit' do
