@@ -51,9 +51,9 @@ class ApplicationController < Sinatra::Base
   # update action
 
   get '/recipes/:id/update' do
-    
+    redirect '/recipes/:id/edit'
   end
-  
+
 
 
 
