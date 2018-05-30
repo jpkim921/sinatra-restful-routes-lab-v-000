@@ -25,10 +25,6 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  # edit action
-
-
-
   post '/recipes' do
     @recipe = Recipe.create(:name => params[:name], :ingredients => params[:ingredients], :cook_time => params[:cook_time])
 
@@ -36,5 +32,12 @@ class ApplicationController < Sinatra::Base
     # # placeholder is there until the real deal
     # erb :placeholder
   end
+
+  # edit action
+  
+
+
+
+
 
 end
