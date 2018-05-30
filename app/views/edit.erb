@@ -2,7 +2,8 @@
   <input id="hidden" type="hidden" name="_method" value="patch">
   <input type="text" name="name" value="<%=@recipe.name%>">
   <p><%= @recipe.ingredients%></p>
-  <input type="text" name="ingredients" value="">
+  <input type="text" name="ingredients" value="<%=@recipe.ingredients%>">
   <input type="text" name="cook_time" value="">
   <input type="submit" name="" value="submit">
 </form>
+  
